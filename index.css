@@ -37,8 +37,8 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Manrope:wght@600&family=Montserrat:wght@300;400;500;600;700&family=Poppins&family=Roboto:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Inter&family=Manrope:wght@600&family=Montserrat:wght@300;400;500;600;700&family=Poppins&family=Roboto:wght@400;700&display=swap');
+ 
 header {
 	padding: 0 2%;
 	display: flex;
@@ -78,12 +78,12 @@ header img {
 	padding: 2% 5% 0 5%;
 	border-radius: 40px;
 	flex: 80% 0 0;
-
+	font-size: 20px;
 }
 
 .search-btn {
 	flex: 10% 1 0;
-	text-align: left;
+	text-align: center;
 }
 
 .search-input img {
@@ -98,6 +98,7 @@ header img {
 }
 
 .user {
+	cursor: pointer;
 	height: 50px;
 	background-color: #fff;
 	border-radius: 40px;
@@ -106,4 +107,72 @@ header img {
 .user img {
 	width: 30px;
 	height: 30px;
+}
+
+/* Modal ---------- */
+
+.modal-window {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 5;
+}
+
+.modal-content {
+	width: 40vw;
+	height: 50vh;
+	position: fixed;
+	top: 20%;
+	left: calc(50% - 20vw);
+	background-color: #fff;
+	z-index: 5;
+}
+
+.modal-content p, .modal-content h3 {
+	text-align: center;
+	padding: 0.5% 0;
+}
+
+.modal-content h3 {
+	font-family: 'Comfortaa', sans-serif;
+	font-size: calc(7px + 20 * (100vw / 1400));
+	font-weight: 600;
+}
+
+.modal-content p{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	font-size: calc(4px + 16 * (100vw / 1400));
+}
+
+.swap {
+	display: flex;
+	justify-content: space-between;
+	text-transform: uppercase;
+}
+
+.swap p {
+	font-family: 'Comfortaa', sans-serif;
+	font-weight: medium;
+	font-size: calc(7px + 25 * (100vw / 1400));
+	padding: 5% 0;
+	flex: 45% 0 0;
+	text-align: center;
+	margin: 2%;
+	cursor: pointer;
+}
+
+.container {
+	display: grid;
+	grid-template: repeat(5, 500px) / repeat(4, 250px);
+	justify-content: center;
+	grid-gap: 50px 50px;
+}
+
+.product img{
+	max-width: 250px;
+	height: 250px;
 }
