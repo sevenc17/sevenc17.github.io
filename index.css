@@ -39,6 +39,17 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Inter&family=Manrope:wght@600&family=Montserrat:wght@300;400;500;600;700&family=Poppins&family=Roboto:wght@400;700&display=swap');
  
+
+#root {
+	height: 100%;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
 header {
 	padding: 0 2%;
 	display: flex;
@@ -193,14 +204,24 @@ header img {
 
 /* Main------------ */
 
+main {
+	text-align: center;
+	flex: 100% 1 0;
+}
+
 .container {
 	padding: 5% 0;
 	display: grid;
-	grid-template: repeat(5, minmax(200px, 100%)) / repeat(4, minmax(100px, 15vw));
+	grid-template: repeat(auto-fit, minmax(200px, 100%)) / repeat(auto-fit, minmax(250px, 20vw));
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	grid-gap: 50px 50px;
+}
+
+select {
+	font-size: calc(7px + 10 * (100vw / 1400));
+	margin: 5% 0;
 }
 
 .product {
@@ -260,6 +281,7 @@ header img {
 
 footer {
 	height: 200px;
+	flex: 0 0 0;
 	display: flex;
 	flex-direction: column;
 }
