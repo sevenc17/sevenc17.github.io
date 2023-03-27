@@ -73,7 +73,7 @@ header {
 	width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -103,7 +103,9 @@ header {
 	text-align: center;
 	justify-content: center;
 	z-index: 1;
-	border: 2px solid #000
+	border: 2px solid #000;
+	opacity: 0;
+	animation: opacityes 0.6s forwards;
 }
 
 .catalog__menu a {
@@ -120,6 +122,10 @@ header {
 	font-family: 'Comfortaa', sans-serif;
 	background-color: #5c8acc;
 	color: #fff;
+}
+
+.select-criteria option {
+	border:rgba(0, 0, 0, 0.07)
 }
 
 .user {
@@ -143,9 +149,11 @@ header {
 }
 
 .search-input input {
+	height: 50%;
 	width: 90%;
 	padding: 0 0 0 2%;
-	font-size: 20px;
+	font-size: calc(7px + 13 * (100vw / 1400));
+	font-family: 'Comfortaa', sans-serif;
 }
 
 .search-btn {
@@ -168,7 +176,7 @@ header {
 
 .user {
 	cursor: pointer;
-	height: 50px;
+	height: 60px;
 	background-color: #fff;
 	border-radius: 40px;
 }
@@ -264,9 +272,11 @@ header {
 
 /* Main------------ */
 
-main {
+.content__page {
 	text-align: center;
 	flex: 100% 1 0;
+	display: flex;
+	align-items: flex-start;
 }
 
 .search {
@@ -275,62 +285,42 @@ main {
 	font-size: calc(7px + 20 * (100vw / 1400));
 }
 
+.left-menu {
+	margin: 0 2%;
+	padding: 0 1%;
+	flex: 20% 0 0;
+	width: 100%;
+	min-width: 150px;
+	background-color: #ccc;
+}
+
+.content {
+	flex: 100% 1 1;
+}
+
 .container {
 	padding: 5% 0;
-	display: grid;
-	grid-template: repeat(auto-fit, minmax(200px, 100%)) / repeat(auto-fit, minmax(250px, 20vw));
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	text-align: center;
-	grid-gap: 50px 50px;
 }
 
-.product {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 100%;
-	padding-bottom: 5%;
-	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
-	 rgba(0, 0, 0, 0.07) 0px 2px 4px,
-	  rgba(0, 0, 0, 0.07) 0px 4px 8px,
-	   rgba(0, 0, 0, 0.07) 0px 8px 16px,
-	    rgba(0, 0, 0, 0.07) 0px 16px 32px,
-		 rgba(0, 0, 0, 0.07) 0px 32px 64px;
+.change__page {
+	padding: 0 20%;
 }
 
-.product.active-modal {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 100%;
-	padding-bottom: 5%;
-	box-shadow: none;	
-}
-
-.product img{
-	padding-top: 5%;
-	width: 13vw;
-	height: 13vw;
-	margin: 0 auto;
-}
-
-.product h2 {
-	font-size: calc(7px + 10 * (100vw / 1400));
-	font-family: 'Comfortaa', sans-serif;
-	line-height: 1.5;
-}
-
-.show-info {
-	margin: 1% auto;
-	padding: 6% 6%;
-	max-width: 60%;
-	background-color: #3c3c3c;
-	font-family: 'Comfortaa', sans-serif;
-	color: #fff;
+.change__page-button {
+	display: inline-block;
+	padding: 0.5% 1%;
+	border: 1px solid #5c8aff;
+	margin: 1%;
 	cursor: pointer;
-	border-radius: 10px;
-	font-size: calc(4px + 12 * (100vw / 1400));
+	font-family: 'Comfortaa', sans-serif;
+}
+
+.current__page {
+	background-color: #3b68dd;
+	color: #fff
 }
 
 .loader {
@@ -376,18 +366,6 @@ main {
 	grid-row: 1 / 3;
 	width: 100vw;
 	height: 100%;
-}
-
-.change__page-button {
-	display: inline-block;
-	padding: 1% 2%;
-	border: 1px solid #5c8aff;
-	margin: 1%;
-	cursor: pointer;
-}
-
-.current__page {
-	background-color: #5c8a55;
 }
 
 .comments h3 {
@@ -471,11 +449,122 @@ footer {
 	padding-bottom: 20px;
 }
 
+.social-list a img{
+	width: 2.5vw
+}
+
 .bottom-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	padding: 0 5%;
 	height: 50px;
 	background-color: #272727;
+	font-family: "MontSerrat", sans-serif;
+	color: #A7A7A7;
 }
+
+.bottom-footer a, .bottom-footer a:visited {
+	color: #5C8AFF;
+}
+
+/* Silder ==========================*/
+
+.slider-draggable {
+	margin: 5% auto;
+	position: relative;
+}
+
+.slider__wrapper {
+	width: 60vw;
+	overflow: hidden;
+}
+
+.slider__list {
+	display: flex;
+	transition: transform 0.5s;
+}
+
+.slider__item {
+	padding: 0% 5%;
+	margin: 2% 5%;
+	height: 100%;
+}
+
+.slider__item img {
+	/* width: 150px;
+	height: 150px; */
+}
+
+.slider__button {
+	width: 3vw;
+	position: absolute;
+	background-color: transparent;
+}
+
+.previous {
+	top: 45%;
+	left: -10%;
+}
+
+.next {
+	top: 45%;
+	right: -10%;
+	transform: rotate(180deg);
+}
+
+
+.product {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	/* width: 20vw; */
+	/* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+	 rgba(0, 0, 0, 0.07) 0px 2px 4px,
+	  rgba(0, 0, 0, 0.07) 0px 4px 8px,
+	   rgba(0, 0, 0, 0.07) 0px 8px 16px,
+	    rgba(0, 0, 0, 0.07) 0px 16px 32px,
+		 rgba(0, 0, 0, 0.07) 0px 32px 64px; */
+}
+
+.product.active-modal {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	padding-bottom: 5%;
+	box-shadow: none;	
+}
+
+.product img{
+	width: 10vw;
+	height: 10vw;
+}
+
+.product h2 {
+	font-size: calc(7px + 10 * (100vw / 1400));
+	font-family: 'Comfortaa', sans-serif;
+	line-height: 1.5;
+}
+
+.show-info {
+	margin: 1% auto;
+	margin: 10% 0;
+	padding: 6% 6%;
+	max-width: 100%;
+	background-color: #3c3c3c;
+	font-family: 'Comfortaa', sans-serif;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 10px;
+	font-size: calc(4px + 12 * (100vw / 1400));
+}
+
+/* Silder ==========================*/
+
+
+
 
 /* BreakePoints */
 /* 
