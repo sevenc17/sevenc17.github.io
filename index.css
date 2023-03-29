@@ -475,11 +475,12 @@ footer {
 }
 
 .slider__wrapper {
-	width: 60vw;
+	/* width: 60vw; */
 	overflow: hidden;
 }
 
 .slider__list {
+	width: 58vw;
 	display: flex;
 	transition: transform 0.5s;
 }
