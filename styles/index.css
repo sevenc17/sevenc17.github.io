@@ -39,6 +39,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Inter&family=Manrope:wght@600&family=Montserrat:wght@300;400;500;600;700&family=Poppins&family=Roboto:wght@400;700&display=swap');
 
+body.lock{
+	overflow-y: hidden;
+}
+
 #root {
 	display: flex;
 	flex-direction: column;
@@ -218,13 +222,14 @@ header {
 }
 
 .modal-content {
-	padding: 4%;
+	padding: 2% 4% 4% 4%;
 	width: 60vw;
-	height: 60vh;
+	height: 70vh;
+	min-height: 500px;
 	position: fixed;
 	text-align: center;
 	left: calc(50% - 30vw);
-	top: calc(50% - 30vh);
+	top: calc(50% - 35vh);
 	background-color: #fff;
 	z-index: 5;
 	opacity: 0;
@@ -253,9 +258,10 @@ header {
 .my__form-form {
 	flex: 1 1 100%;
 	width: 80%;
+	min-height: 250px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	text-align: left;
 }
 
@@ -280,7 +286,7 @@ header {
 }
 
 .swap-btn {
-	padding: 5% 10%;
+	padding: 4% 8%;
 	margin: 2%;
 	text-transform: uppercase;
 	font-weight: 700;
