@@ -220,12 +220,11 @@ header {
 .modal-content {
 	padding: 4%;
 	width: 60vw;
-	height: 100vh;
-	overflow-y: auto;
+	height: 60vh;
 	position: fixed;
 	text-align: center;
-	/* top: calc(50% - 25vh); */
 	left: calc(50% - 30vw);
+	top: calc(50% - 30vh);
 	background-color: #fff;
 	z-index: 5;
 	opacity: 0;
@@ -238,29 +237,60 @@ header {
 	}
 }
 
-.sign__up {
-	height: 100%;
+.user__form {
+	font-family: 'Comfortaa', sans-serif;
+}
+
+.my__form {
+	height: 40vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	color: #000;
-	font-family: 'Comfortaa', sans-serif;
 }
 
-.sign__up-form {
+.my__form-form {
 	flex: 1 1 100%;
-	width: 100%;
+	width: 80%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	text-align: left;
 }
 
-.sign__up-form input {
+.my__form-form input {
 	height: 30px;
-	margin: 1% 1% 1% 0;
-	border: 2px solid rgba(0, 0, 0, 0.4)
+	margin: 2% 1% 0% 0;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.4)
+}
+
+.my__form-title h3{
+	font-size: calc(7px + 20 * (100vw / 1400));
+}
+
+.my__form-submit {
+	margin: 0 auto;
+	padding: 4% 0;
+	font-size: calc(7px + 10 * (100vw / 1400));
+	background-color: #fff;
+	border: 2px solid #000;
+	border-radius: 15px;
+	width: 70%;
+}
+
+.swap-btn {
+	padding: 5% 10%;
+	margin: 2%;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #000;
+	background-color: #fff;
+	font-size: calc(7px + 20 * (100vw / 1400));
+}
+
+.active-swap {
+	background-color: #d9d9d9;
 }
 
 /* Main------------ */
@@ -414,6 +444,7 @@ footer {
 	display: flex;
 	justify-content: space-around;
 	font-size: calc(4px + 12 * (100vw / 1400));
+	text-decoration: underline;
 }
 
 .contacts {
@@ -868,6 +899,7 @@ footer {
 	.top-footer {
 		display: grid;
 		grid-template: repeat(2, 10vh) / 30vw 50vw;
+		padding-top: 2%;
 		grid-gap: 5% 0;
 	}
 	.top-footer nav {
@@ -879,26 +911,26 @@ footer {
 		padding: 1% 5% 1% 0;
 	}
 	.logo img {
-		max-width: 22vw;
+		max-width: 90%;
 	}
 	.social-list {
-		justify-content: flex-start;
+		justify-content: space-between;
 		align-items: center;
 	}
-	.social-list a {
-		padding: 0 5% 0 0;
-	}
 	.social-list a img{
-		width: 4vw;
+		width: 5vw;
 	}
 	.availability {
 		padding: 2.5%;
 		max-width: 40vw;
+		justify-content: space-evenly;
 	}
 	.availability span {
 		font-size: calc(4px + 20 * (100vw / 1400));
 	}
-
+	.address {
+		font-size: calc(4px + 20 * (100vw / 1400));
+	}
 
 	.favourite__product img {
 		grid-row: 1 / 3;
