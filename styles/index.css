@@ -1270,10 +1270,10 @@ footer {
 	margin-left: 5px !important;
 }
 
-.swiper-pagination {
+/* .swiper-pagination {
 	z-index: 15 !important;
 	bottom: var(--swiper-pagination-bottom,-8px) !important ;
-}
+} */
 
 /* BreakPoints */
 
