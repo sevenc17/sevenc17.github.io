@@ -193,11 +193,17 @@ header {
 	top: 100%;
 	left: 0;
 	z-index: 10;
+	min-height: 100%;
 	max-height: 20vh;
 	width: 100%;
 	overflow-y: auto;
-	background-color: #000;
-	color: #fff;
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #000;
+}
+
+.search-list a, .search-list a:visited{
+	color: #000;
 }
 
 .search-list li::first-letter {
@@ -783,20 +789,24 @@ footer {
 	overflow-y: auto;
 }
 
-.description__info::-webkit-scrollbar {
-	width: 12px;
-	height: 12px;
+/* Scrollbar */
+
+.description__info::-webkit-scrollbar, .search-list::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
 }
 
-.description__info::-webkit-scrollbar-track {
+.description__info::-webkit-scrollbar-track, .search-list::-webkit-scrollbar-track {
 	background: rgba(0, 0, 0, 0.3);
 	border-radius: 5px;
 }
 
-.description__info::-webkit-scrollbar-thumb {
+.description__info::-webkit-scrollbar-thumb, .search-list::-webkit-scrollbar-thumb{
 	border-radius: 5px;
 	background: rgba(0, 0, 0, 0.5);
 }
+
+/* Scrollbar */
 
 .description .show-info {
 	margin: 0;
@@ -1261,6 +1271,34 @@ footer {
 	width: 23vw;
 	height: 23vw;
 }
+
+/* SearchPage */
+
+.search__container {
+	text-align: center;
+}
+
+.search__content {
+	justify-content: center;
+	background-color: #fff;
+    display: grid;
+    grid-gap: 10px;
+	grid-template: repeat(auto-fit, minmax(200px, 150px))/repeat(auto-fit, minmax(200px, 150px));
+	color: #000;
+}
+
+.search__product {
+	width: 100%;
+	height: 100%;
+}
+
+.search__product img{
+	aspect-ratio: 8/10;
+	max-width: 60%;
+	max-height: 60%;
+}
+
+/* SearchPage */
 
 /* BreakPoints */
 
