@@ -1376,6 +1376,10 @@ footer {
 	header {
 		padding: 2% 4%
 	}
+	.user {
+		flex: 35px 0 0;
+		height: 35px;
+	}
 	.user.adaptive {
 		flex: 35px 0 0;
 		height: 35px;
@@ -1429,9 +1433,9 @@ footer {
 		right: -4%;
 	}
 
-	.favourite img, .add-to-compare img {
-		width: 3vw;
-		height: 3vw;
+	.favourite__product .product__info-btns img{
+		width: 4vw;
+		height: 4vw;
 	}
 
 	.top-footer nav {
@@ -1465,6 +1469,10 @@ footer {
 }
 
 @media (max-width: 450px) {
+	.user {
+		flex: 25px 0 0;
+		height: 25px;		
+	}
 	.user.adaptive {
 		flex: 30px 0 0;
 		height: 30px;
@@ -1497,7 +1505,7 @@ footer {
 
 	.search-input {
 		height: 30px;
-		flex: 60% 0 1;
+		flex: 70% 0 1;
 	}
 	.search-input input::placeholder {
 		font-size: calc(7px + 20 * (100vw / 1400));
