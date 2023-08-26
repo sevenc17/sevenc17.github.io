@@ -453,7 +453,7 @@ header {
 	display: flex;
 	text-align: left;
 	flex-direction: column;
-	background: url('images/fone.png') 0 0 / 200px 200px repeat;
+	background: url('../images/fone.png') 0 0 / 200px 200px repeat;
 	color: #fff;
 }
 
