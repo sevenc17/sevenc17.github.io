@@ -1223,9 +1223,8 @@ footer {
 	background-color: #000;
 }
 
-.compare__products {
-	display: flex;
-	justify-content: space-around;
+.specifications__list {
+	margin: 2% 0;
 }
 
 .compare__product {
@@ -1233,24 +1232,37 @@ footer {
 	flex: 50% 0 0;
 }
 
-.product-title {
-	text-align: center;
-	padding: 0 0 5% 0;
+.products__titles {
+	display: flex;
+	justify-content: space-around;
+	font-size: calc(5px + 16 * (100vw / 1400));
+	margin: 3% 0;
+}
+
+.product__specifications-specifications {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px 10px;
 }
 
 .product__specification {
-	margin: 1% 0;
-	height: 6vh;
-	min-height: 50px;
+	padding: 5% 0;
+	min-height: 40px;
 	font-size: calc(5px + 10 * (100vw / 1400));
 	color: #fff;
 	border-radius: 15px;
-	animation-name: slide, bg;
-	animation-duration: 0.3s, 3s;
+	animation-name: slide;
+	animation-duration: 0.4s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: forwards;
 	position: relative;
+	text-align: center;
+	transform: translateY(50px);
+	opacity: 0;
+}
 
+.specification-title {
+	margin: 2% 0;
 }
 
 .product__specification-sign {
@@ -1262,32 +1274,28 @@ footer {
 
 }
 
-.first-product {
-	transform: translateX(-200px);
-	padding: 2% 0 0 2%;
-}
-
-.second-product {
-	transform: translateX(200px);
-	text-align: right;
-	padding: 2% 2% 0 0;
+.spec-values {
+	display: flex;
+	justify-content: space-between;
 }
 
 @keyframes slide {
-	100% {
-		transform: translateX(0);
+	50%{
+		opacity: 1;
+		transform: translateY(0);
 	}
-}
-
-@keyframes bg {
+	75%{
+		transform: translateY(-10px);
+	}
 	100%{
-		background-color: rgba(256, 256, 256, 1) !important;
+		transform: translateY(0px);
+		opacity: 1;
 	}
 }
 
 .compare-colors-container {
+	height: 8vw;
 	display: flex;
-	padding: 2% 0;
 	color: #fff;
 	background-color: #000;
 	justify-content: center;
@@ -1296,6 +1304,19 @@ footer {
 	top: 0;
 	left: 0;
 	z-index: 10;
+}
+
+.compare-colors-container img {
+	width: 5vw;
+}
+
+.compare-colors-container img:nth-child(3) {
+	align-self: flex-start;
+}
+
+.compare-colors-container div:nth-child(2) {
+	align-self: center;
+	margin: 0 1%
 }
 
 .compare-colors {
