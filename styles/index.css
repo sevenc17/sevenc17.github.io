@@ -133,7 +133,6 @@ header {
 	top: calc(100% - 4px);
 	display: flex;
 	flex-direction: column;
-	z-index: 11;
 	border-top: 2px solid #000;
 	border-radius: 15px;
 	border-top-left-radius: 0;
@@ -149,6 +148,7 @@ header {
 	font-size: calc(4px + 13 * (100vw / 1400));
 	padding: 5%;
 	flex: 100% 1 1;
+	z-index: 15;
 }
 
 .catalog__menu a:last-child {
@@ -1239,9 +1239,15 @@ footer {
 	margin: 3% 0;
 }
 
+.products__titles a:visited, .products__titles a {
+	color: #fff;
+	text-decoration: underline;
+}
+
 .product__specifications-specifications {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	justify-content: center;
 	gap: 10px 10px;
 }
 
@@ -1303,7 +1309,7 @@ footer {
 	position: sticky;
 	top: 0;
 	left: 0;
-	z-index: 10;
+	z-index: 2;
 }
 
 .compare-colors-container img {
