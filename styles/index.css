@@ -1337,6 +1337,32 @@ footer {
 	border-radius: 20px;
 }
 
+.compare__products__tabs-btns {
+	margin: 2% 0 0 5%;
+	display: flex;
+}
+
+.compare__tab-button {
+	border-radius: 10px;
+	border: 2px solid #fff;
+	cursor: pointer;
+	padding: 2%;
+}
+
+.compare__tab-button.active__tab-btn {
+	background-color: #fff;
+	color: #000
+}
+
+.compare__tab {
+	display: none;
+}
+
+.compare__tab.active__tab {
+	display: block;
+
+}
+
 /* Compare Zone */
 
 
