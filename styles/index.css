@@ -70,26 +70,50 @@ body.lock{
 	height: 100%;
 	font-family: 'Comfortaa', sans-serif;
 	overflow-x: hidden;
+	/* background: url(../images/repeat-fone.jpg) 0 0 / 200px 200px repeat; */
+	background-color: #000;
 }
 
 header {
-	flex: 0 0;
-	padding: 1% 2%;
+	margin: 0 10% 5% 10%;
+	padding: 1% 0%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	background-color: #000;
+	border-bottom: 1px #777 solid;
+	-webkit-box-shadow: 1px 46px 61px 73px rgba(0, 0, 0, 0.51);
+	-moz-box-shadow: 1px 46px 61px 73px rgba(0, 0, 0, 0.51);
+	box-shadow: 1px 46px 61px 73px rgba(0, 0, 0, 0.51);
+	z-index: 5;
 	/* box-shadow: rgba(250, 250, 250, 1) 0px 25px 36px -28px inset; */
 }
 
+header .logo img {
+	max-width: 7vw;
+}
 
 .catalog {
-	flex: 15% 0 0;
+	flex: 30% 1 0;
 	height: 80%;
 	font-size: calc(7px + 13 * (100vw / 1400));
 	cursor: pointer;
 	position: relative;
 	z-index: 5;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.catalog__list {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.catalog__list a, .catalog__list a:visited {
+	color: #eee;
+	font-size: calc(4px + 14 * (100vw / 1400));
+	padding: 0 2.5%;
 }
 
 .catalog__button {
@@ -179,7 +203,7 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex: 40% 0 1;
+	flex: 60% 0 1;
 	width: 100%;
 	height: 40px;
 	border-radius: 40px;
@@ -188,19 +212,22 @@ header {
 }
 
 .search-input input {
-	height: 50%;
-	width: 80%;
+	height: 90%;
+	width: 90%;
 	font-size: calc(7px + 13 * (100vw / 1400));
 	font-family: 'Comfortaa', sans-serif;
 	background-color: #000;
-	border-bottom: 1px solid #4e4e4e;
+	border: 1px solid #4e4e4e;
+	border-radius: 20px;
 	color: #fff;
+	padding: 1% 1% 1% 5%;
+
 }
 
 .search-btn {
 	position: absolute;
 	top: calc(50% - 10px);
-	right: 4%;
+	right: 10%;
 	cursor: pointer;
 }
 
@@ -249,7 +276,7 @@ header {
 	align-items: center;
 	justify-content: space-evenly;
 	font-family: 'Montserrat', sans-serif;
-	flex: 200px 0 0;
+	flex: 80px 0 0;
 }
 
 .user img {
@@ -396,7 +423,6 @@ header {
 	width: 100%;
 	padding: 4% 8%;
 	margin: 0 0 2% 0;
-	text-transform: uppercase;
 	font-weight: 700;
 	color: #000;
 	background-color: #fff;
@@ -981,14 +1007,6 @@ footer {
 	padding: 2% 1%;
 	border: 5px solid #000;
 	min-width: 0;
-}
-
-.single__product-info .favourite {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 2.5vw;
-	height: 2.5vw;
 }
 
 .single__product-image .swiper {
@@ -1627,7 +1645,22 @@ footer {
 
 /* BreakPoints */
 
+@media (max-width: 1080px) {
+	header {
+		margin: 0 0 7% 0;
+		padding: 2% 5%;
+		-webkit-box-shadow: 1px -17px 61px 73px rgba(0, 0, 0, 0.51);
+		-moz-box-shadow: 1px -17px 61px 73px rgba(0, 0, 0, 0.51);
+		box-shadow: 1px -17px 61px 73px rgba(0, 0, 0, 0.51);	
+		border-bottom: 0;
+	}
+}
+
 @media (max-width: 900px) {
+	.catalog {
+		height: 35px;
+		flex: 10% 0 0;
+	}
 	.search__content {
 		justify-content: left;
 		display: flex;
@@ -1657,10 +1690,6 @@ footer {
 	.user.adaptive a img {
 		height: 30px;
 		width: 30px;
-	}
-	.catalog {
-		height: 35px;
-		flex: 15% 0 0;
 	}
 	.catalog img {
 		width: 25px;
