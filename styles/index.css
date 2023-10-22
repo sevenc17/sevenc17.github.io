@@ -492,6 +492,20 @@ header .logo img {
 	color: #fff;
 }
 
+.product__info {
+	white-space: nowrap;
+	width: 15vw;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #000;
+	font-size: calc(7px + 10 * (100vw / 1400));
+	line-height: 1.2;
+}
+
+.top-title {
+	font-size: calc(7px + 20 * (100vw / 1400));
+}
+
 .search {
 	border: 2px solid #000;
 	padding: 2% 10%;
@@ -951,8 +965,7 @@ footer {
 	}
 
 	.product__info {
-		width: 100%;
-		font-size: calc(5px + 10 * (100vw / 1400));
+		font-size: calc(7px + 15 * (100vw / 1400));
 	}
 	.favourite img, .add-to-compare img {
 		width: 3vw;
