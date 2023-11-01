@@ -420,7 +420,7 @@ header .logo img {
 	margin: 0 0 2% 0;
 	font-weight: 700;
 	color: #000;
-	background-color: #fff;
+	background-color: #aaa;
 	font-size: calc(7px + 20 * (100vw / 1400));
 }
 
@@ -435,7 +435,7 @@ header .logo img {
 }
 
 .active-swap {
-	background-color: #aaa;
+	background-color: #fff;
 }
 
 /* Main------------ */
@@ -1023,7 +1023,7 @@ footer {
 .single__product-image .swiper {
 	margin: 0 auto !important;
 	width: 20vw;
-	height: 25vw;
+	height: 17vw;
 }
 
 .single__product-image .swiper-slide {
@@ -1076,6 +1076,21 @@ footer {
 	justify-content: flex-start;
 	color: #5C8AFF;
 	font-size: calc(5px + 15 * (100vw / 1400));
+}
+
+.single__product-content .product__info-btns {
+	display: flex;
+	justify-content: space-around;
+
+}
+
+.single__product-content .product__info-btns .favourite {
+	padding-bottom: 0;
+}
+
+.single__product-content .product__info-btns .favourite img,  .single__product-content .product__info-btns .add-to-compare img{
+	width: 4vw;
+	height: 4vw;
 }
 
 /* Single styles ========================= */
